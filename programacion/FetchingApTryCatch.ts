@@ -26,7 +26,7 @@ import { Poke, PokeEntireApi } from "../types"
             try {
                 let reqResults = await fetch(res.results.slice(0, 10)[i].url)
                 // El array que contiene todos los pokemons
-                let resResults =  await reqResults.json() as PokeEntireApi[]
+                let resResults: PokeEntireApi =  await reqResults.json() 
                 console.log(resResults)
                 // if(!reqResults.ok) throw { status: req.status, statusText: req.statusText}
                 template += `
