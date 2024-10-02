@@ -1,16 +1,16 @@
- interface Poke {
+ export interface Poke {
 count: number
 next: string
 previous: any
 results: Result[]
 }
 
- interface Result {
+ export interface Result {
 name: string
 url: string
 }
 
- interface PokeEntireApi {
+ export interface PokeEntireApi {
 abilities: Ability[]
 base_experience: number
 cries: Cries
@@ -33,89 +33,89 @@ types: Type[]
 weight: number
 }
 
- interface Ability {
+ export interface Ability {
 ability: Ability2
 is_hidden: boolean
 slot: number
 }
 
- interface Ability2 {
+ export interface Ability2 {
 name: string
 url: string
 }
 
- interface Cries {
+ export interface Cries {
 latest: string
 legacy: string
 }
 
- interface Form {
+ export interface Form {
 name: string
 url: string
 }
 
- interface Index {
+ export interface Index {
 game_index: number
 version: Version
 }
 
- interface Version {
+ export interface Version {
 name: string
 url: string
 }
 
- interface HeldItem {
+ export interface HeldItem {
 item: Item
 version_details: VersionDetail[]
 }
 
- interface Item {
+ export interface Item {
 name: string
 url: string
 }
 
- interface VersionDetail {
+ export interface VersionDetail {
 rarity: number
 version: Version2
 }
 
- interface Version2 {
+ export interface Version2 {
 name: string
 url: string
 }
 
- interface Mfe {
+ export interface Mfe {
 move: Move
 version_group_details: VersionGroupDetail[]
 }
 
- interface Move {
+ export interface Move {
 name: string
 url: string
 }
 
- interface VersionGroupDetail {
+ export interface VersionGroupDetail {
 level_learned_at: number
 move_learn_method: MoveLearnMethod
 version_group: VersionGroup
 }
 
- interface MoveLearnMethod {
+ export interface MoveLearnMethod {
 name: string
 url: string
 }
 
- interface VersionGroup {
+ export interface VersionGroup {
 name: string
 url: string
 }
 
- interface Species {
+ export interface Species {
 name: string
 url: string
 }
 
- interface Sprites {
+ export interface Sprites {
 back_default: string
 back_female: any
 back_shiny: string
@@ -128,31 +128,31 @@ other: Other
 versions: Versions
 }
 
- interface Other {
+ export interface Other {
 dream_world: DreamWorld
 home: Home
 "official-artwork": OfficialArtwork
 showdown: Showdown
 }
 
- interface DreamWorld {
+ export interface DreamWorld {
 front_default: string
 front_female: any
 }
 
- interface Home {
+ export interface Home {
 front_default: string
 front_female: any
 front_shiny: string
 front_shiny_female: any
 }
 
- interface OfficialArtwork {
+ export interface OfficialArtwork {
 front_default: string
 front_shiny: string
 }
 
- interface Showdown {
+ export interface Showdown {
 back_default: string
 back_female: any
 back_shiny: string
@@ -163,7 +163,7 @@ front_shiny: string
 front_shiny_female: any
 }
 
- interface Versions {
+ export interface Versions {
 "generation-i": GenerationI
 "generation-ii": GenerationIi
 "generation-iii": GenerationIii
@@ -174,12 +174,12 @@ front_shiny_female: any
 "generation-viii": GenerationViii
 }
 
- interface GenerationI {
+ export interface GenerationI {
 "red-blue": RedBlue
 yellow: Yellow
 }
 
- interface RedBlue {
+ export interface RedBlue {
 back_default: string
 back_gray: string
 back_transparent: string
@@ -188,7 +188,7 @@ front_gray: string
 front_transparent: string
 }
 
- interface Yellow {
+ export interface Yellow {
 back_default: string
 back_gray: string
 back_transparent: string
@@ -197,13 +197,13 @@ front_gray: string
 front_transparent: string
 }
 
- interface GenerationIi {
+ export interface GenerationIi {
 crystal: Crystal
 gold: Gold
 silver: Silver
 }
 
- interface Crystal {
+ export interface Crystal {
 back_default: string
 back_shiny: string
 back_shiny_transparent: string
@@ -214,7 +214,7 @@ front_shiny_transparent: string
 front_transparent: string
 }
 
- interface Gold {
+ export interface Gold {
 back_default: string
 back_shiny: string
 front_default: string
@@ -222,7 +222,7 @@ front_shiny: string
 front_transparent: string
 }
 
- interface Silver {
+ export interface Silver {
 back_default: string
 back_shiny: string
 front_default: string
@@ -230,38 +230,38 @@ front_shiny: string
 front_transparent: string
 }
 
- interface GenerationIii {
+ export interface GenerationIii {
 emerald: Emerald
 "firered-leafgreen": FireredLeafgreen
 "ruby-sapphire": RubySapphire
 }
 
- interface Emerald {
+ export interface Emerald {
 front_default: string
 front_shiny: string
 }
 
- interface FireredLeafgreen {
+ export interface FireredLeafgreen {
 back_default: string
 back_shiny: string
 front_default: string
 front_shiny: string
 }
 
- interface RubySapphire {
+ export interface RubySapphire {
 back_default: string
 back_shiny: string
 front_default: string
 front_shiny: string
 }
 
- interface GenerationIv {
+ export interface GenerationIv {
 "diamond-pearl": DiamondPearl
 "heartgold-soulsilver": HeartgoldSoulsilver
 platinum: Platinum
 }
 
- interface DiamondPearl {
+ export interface DiamondPearl {
 back_default: string
 back_female: any
 back_shiny: string
@@ -272,7 +272,7 @@ front_shiny: string
 front_shiny_female: any
 }
 
- interface HeartgoldSoulsilver {
+ export interface HeartgoldSoulsilver {
 back_default: string
 back_female: any
 back_shiny: string
@@ -283,7 +283,7 @@ front_shiny: string
 front_shiny_female: any
 }
 
- interface Platinum {
+ export interface Platinum {
 back_default: string
 back_female: any
 back_shiny: string
@@ -294,11 +294,11 @@ front_shiny: string
 front_shiny_female: any
 }
 
- interface GenerationV {
+ export interface GenerationV {
 "black-white": BlackWhite
 }
 
- interface BlackWhite {
+ export interface BlackWhite {
 animated: Animated
 back_default: string
 back_female: any
@@ -310,7 +310,7 @@ front_shiny: string
 front_shiny_female: any
 }
 
- interface Animated {
+ export interface Animated {
 back_default: string
 back_female: any
 back_shiny: string
@@ -321,68 +321,68 @@ front_shiny: string
 front_shiny_female: any
 }
 
- interface GenerationVi {
+ export interface GenerationVi {
 "omegaruby-alphasapphire": OmegarubyAlphasapphire
 "x-y": XY
 }
 
- interface OmegarubyAlphasapphire {
+ export interface OmegarubyAlphasapphire {
 front_default: string
 front_female: any
 front_shiny: string
 front_shiny_female: any
 }
 
- interface XY {
+ export interface XY {
 front_default: string
 front_female: any
 front_shiny: string
 front_shiny_female: any
 }
 
- interface GenerationVii {
+ export interface GenerationVii {
 icons: Icons
 "ultra-sun-ultra-moon": UltraSunUltraMoon
 }
 
- interface Icons {
+ export interface Icons {
 front_default: string
 front_female: any
 }
 
- interface UltraSunUltraMoon {
+ export interface UltraSunUltraMoon {
 front_default: string
 front_female: any
 front_shiny: string
 front_shiny_female: any
 }
 
- interface GenerationViii {
+ export interface GenerationViii {
 icons: Icons2
 }
 
- interface Icons2 {
+ export interface Icons2 {
 front_default: string
 front_female: any
 }
 
- interface Stat {
+ export interface Stat {
 base_stat: number
 effort: number
 stat: Stat2
 }
 
- interface Stat2 {
+ export interface Stat2 {
 name: string
 url: string
 }
 
- interface Type {
+ export interface Type {
 slot: number
 type: Type2
 }
 
- interface Type2 {
+ export interface Type2 {
 name: string
 url: string
 }
